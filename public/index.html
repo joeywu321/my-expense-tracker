@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
+    <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' 'unsafe-inline' https://www.gstatic.com https://apis.google.com https://accounts.google.com **blob:**;
+    frame-src 'self' https://accounts.google.com https://oauth2.googleapis.com;
+    connect-src 'self' https://www.googleapis.com;">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google 日曆記帳助手</title>
