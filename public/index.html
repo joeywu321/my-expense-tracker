@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google 日曆記帳助手</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div id="login-section" class="card center-content">
+            <h1>記帳助手</h1>
+            <p>連結 Google 日曆自動計算花費</p>
+            <button id="login-btn" class="google-btn">使用 Google 帳號登入</button>
+        </div>
+
+        <div id="dashboard-section" class="hidden">
+            <header>
+                <h2>我的消費概覽 (<span id="current-month"></span>)</h2>
+                <button id="logout-btn" class="btn-small">登出</button>
+            </header>
+
+            <div class="card budget-card">
+                <label>本月預算目標：</label>
+                <input type="number" id="budget-input" value="30000">
+            </div>
+
+            <div class="stats-grid">
+                <div class="card stat-card">
+                    <h3>已消費金額</h3>
+                    <p class="amount" id="total-spent">$0</p>
+                </div>
+                <div class="card stat-card">
+                    <h3>剩餘額度</h3>
+                    <p class="amount" id="remaining-budget">$0</p>
+                </div>
+            </div>
+
+            <div class="card action-card">
+                <h3>功能操作</h3>
+                <p id="status-msg">正在檢查日曆...</p>
+                <div class="btn-group">
+                    <button id="refresh-btn" class="btn">重新整理數據</button>
+                    <button id="export-btn" class="btn btn-outline">匯出至 Google Sheet</button>
+                </div>
+            </div>
+
+            <div class="card list-card">
+                <h3>消費明細</h3>
+                <ul id="expense-list">
+                    </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
+
+    <script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
+    <script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
+
+    <script src="app.js"></script>
+</body>
+</html>
