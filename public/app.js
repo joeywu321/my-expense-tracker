@@ -20,7 +20,7 @@ const firebaseConfig = {
 
 // Google API 設定
 const CLIENT_ID = "my-money-4b752"; // 從 Google Cloud Console 取得
-const API_KEY = "AIzaSyCnpibjrQYnzCnIh5S4t1"; // 同 Firebase API Key 即可，或另外申請
+const API_KEY = "AIzaSyCnpibjrQYnzCnIh5S4t1-DFs8YFnKYqPA"; // 同 Firebase API Key 即可，或另外申請
 const DISCOVERY_DOCS = [
     'https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest',
     'https://sheets.googleapis.com/$discovery/rest?version=v4'
